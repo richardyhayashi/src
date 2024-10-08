@@ -5,15 +5,15 @@ YouTube: `https://www.youtube.com/watch?v=0OaDyjB9Ib8&t=56s`
 
 Source: 
 
-1. Intro & Demo
-2. Environment setup
-3. Folders setup
-4. Landing page
-5. Authentication & Database
-6. Sidebar
-7. User Settings
-8. Schema & API
-9.
+01. Intro & Demo
+02. Environment setup
+03. Folders setup
+04. Landing page
+05. Authentication & Database
+06. Sidebar
+07. User Settings
+08. Schema & API
+09. Sidebar Item
 10.
 11.
 12.
