@@ -14,7 +14,7 @@ Source:
 07. User Settings
 08. Schema & API
 09. Sidebar Item
-10.
+10. Document list
 11.
 12.
 13.
