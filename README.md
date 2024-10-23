@@ -16,7 +16,7 @@ Source:
 09. Sidebar Item
 10. Document list
 11. Archive functionality
-12.
+12. Trash box
 13.
 14.
 15.
