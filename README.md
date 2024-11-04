@@ -18,7 +18,7 @@ Source:
 11. Archive functionality
 12. Trash box
 13. Search functionality
-14.
+14. Settings
 15.
 16.
 17.
