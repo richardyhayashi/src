@@ -17,7 +17,7 @@ Source:
 10. Document list
 11. Archive functionality
 12. Trash box
-13.
+13. Search functionality
 14.
 15.
 16.
@@ -66,3 +66,7 @@ TypeScrit: yes, ESLint: yes, Tailwind CSS: yes, 'src' directory: no, App Router:
 ## Sonner
 
 `$ npm i sonner`
+
+## Zustand
+
+`$ npm i zustand`
