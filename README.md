@@ -19,7 +19,7 @@ Source:
 12. Trash box
 13. Search functionality
 14. Settings
-15.
+15. Navbar
 16.
 17.
 18.
