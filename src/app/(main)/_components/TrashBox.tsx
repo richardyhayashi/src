@@ -3,11 +3,12 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useQuery, useMutation } from 'convex/react';
+import { Search, Trash, Undo } from 'lucide-react';
 import { toast } from 'sonner';
+
 import { api } from '@/convex/_generated/api';
 import { Id } from '@/convex/_generated/dataModel';
 import { Spinner } from '@/components/Spinner';
-import { Search, Trash, Undo } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import ConfirmModal from '@/components/modals/ConfirmModal';
 
@@ -42,7 +43,9 @@ const TrashBox = () => {
     });
   };
 
-  const onRenove = (documentId: Id<'documents'>) => {
+  const onRenove = (
+    documentId: Id<'documents'>
+  ) => {
     const promise = remove({ id: documentId });
 
     toast.promise(promise, {

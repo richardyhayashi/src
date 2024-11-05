@@ -1,13 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { Doc, Id } from '@/convex/_generated/dataModel';
 import { useQuery } from 'convex/react';
-import { api } from '@/convex/_generated/api';
-import Item from './Item';
-import { cn } from '@/lib/utils';
 import { FileIcon } from 'lucide-react';
+
+import { Doc, Id } from '@/convex/_generated/dataModel';
+import { api } from '@/convex/_generated/api';
+import { cn } from '@/lib/utils';
+
+import Item from './Item';
 
 interface DocumentListProps {
   parentDocumentId?: Id<'documents'>;
@@ -15,13 +17,16 @@ interface DocumentListProps {
   data?: Doc<'documents'>[];
 }
 
-const DocumentList = ({ parentDocumentId, level = 0 }: DocumentListProps) => {
+const DocumentList = ({
+  parentDocumentId,
+  level = 0
+}: DocumentListProps) => {
   const params = useParams();
   const router = useRouter();
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const [expanded, setExpanded] = React.useState<Record<string, boolean>>({});
 
   const onExpand = (documentId: string) => {
-    setExpanded((prevExpanded) => ({
+    setExpanded(prevExpanded => ({
       ...prevExpanded,
       [documentId]: !prevExpanded[documentId],
     }));
@@ -53,7 +58,7 @@ const DocumentList = ({ parentDocumentId, level = 0 }: DocumentListProps) => {
     <>
       <p
         style={{
-          paddingLeft: level ? `${level * 12 + 25}px` : undefined,
+          paddingLeft: level ? `${(level * 12) + 25}px` : undefined
         }}
         className={cn(
           'hidden text-sm font-medium text-muted-foreground/80',
@@ -77,7 +82,10 @@ const DocumentList = ({ parentDocumentId, level = 0 }: DocumentListProps) => {
             expanded={expanded[document._id]}
           />
           {expanded[document._id] && (
-            <DocumentList parentDocumentId={document._id} level={level + 1} />
+            <DocumentList
+              parentDocumentId={document._id}
+              level={level + 1}
+            />
           )}
         </div>
       ))}

@@ -9,11 +9,7 @@ import {
   Plus,
   Trash,
 } from 'lucide-react';
-import { Id } from '@/convex/_generated/dataModel';
-import { cn } from '@/lib/utils';
-import { Skeleton } from '@/components/ui/skeleton';
 import { useMutation } from 'convex/react';
-import { api } from '@/convex/_generated/api';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import {
@@ -24,6 +20,11 @@ import {
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import { useUser } from '@clerk/clerk-react';
+
+import { Id } from '@/convex/_generated/dataModel';
+import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
+import { api } from '@/convex/_generated/api';
 
 interface ItemProps {
   id?: Id<'documents'>;
@@ -104,7 +105,7 @@ const Item = ({
     <div
       onClick={onClick}
       role="button"
-      style={{ paddingLeft: level ? `${level * 12}px` : '12px' }}
+      style={{ paddingLeft: level ? `${level * 12 + 12}px` : '12px' }}
       className={cn(
         'group min-h-[27px] text-sm py-1 pr-3 w-full hover:bg-primary/5 flex items-center text-muted-foreground font-medium',
         active && 'bg-primary/5 text-primary'

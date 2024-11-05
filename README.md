@@ -20,12 +20,16 @@ Source:
 13. Search functionality
 14. Settings
 15. Navbar
-16.
+16. Banner component
 17.
 18.
 19.
 20.
+21.
+22.
 
+
+## Start App
 
 1. `npx convex dev`
 2. `npm run dev`
