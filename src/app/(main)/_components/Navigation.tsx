@@ -22,16 +22,15 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from '@/components/ui/popover';
+import { useSearch } from '@/hooks/use-search';
 
 import UserItem from './UserItem';
 import Item from './Item';
 import DocumentList from './DocumentList';
-
-import { useSearch } from '@/hooks/use-search';
-import { useSettings } from '@/hooks/use-settings';
-
 import TrashBox from './TrashBox';
 import Navbar from './Navbar';
+
+import { useSettings } from '@/hooks/use-settings';
 
 const Navigation = () => {
   const settings = useSettings();
@@ -201,7 +200,7 @@ const Navigation = () => {
       <div
         ref={navbarRef}
         className={cn(
-          'absolute top-0, z-[99999] left-60 w-[calc(100%-240px)]',
+          'absolute top-0 z-[99999] left-60 w-[calc(100%-240px)]',
           isResetting && 'transition-all ease-in-out duration-300',
           isMobile && 'left-0 w-full'
         )}

@@ -14,7 +14,9 @@ interface BannerProps {
   documentId: Id<'documents'>;
 }
 
-const Banner = ({ documentId }: BannerProps) => {
+const Banner = ({
+  documentId
+}: BannerProps) => {
   const router = useRouter();
 
   const remove = useMutation(api.documents.remove);
@@ -43,7 +45,7 @@ const Banner = ({ documentId }: BannerProps) => {
   };
 
   return (
-    <div className="w-full bg-rose-500 text-center text-sm p-2 text-white flex items-center gap-x-2">
+    <div className="w-full bg-rose-500 text-center text-sm p-2 text-white flex items-center gap-x-2 justify-center">
       <p>This pge is in the Trash.</p>
       <Button
         size="sm"
@@ -56,7 +58,6 @@ const Banner = ({ documentId }: BannerProps) => {
       <ConfirmModal onConfirm={onRemove}>
         <Button
           size="sm"
-          
           variant="outline"
           className="border-white bg-transparent hover:bg-primary/5 text-white hover:text-white p-1 px-2 h-auto font-normal"
         >

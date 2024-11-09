@@ -55,7 +55,7 @@ const ConfirmModal = ({
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  )
-}
+  );
+};
 
-export default ConfirmModal
+export default ConfirmModal;

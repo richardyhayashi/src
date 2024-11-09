@@ -91,9 +91,7 @@ export const getSidebar = query({
     const documents = await ctx.db
       .query('documents')
       .withIndex('by_user_parent', (q) =>
-        q
-          .eq('userId', userId)
-          .eq('parentDocument', args.parentDocument)
+        q.eq('userId', userId).eq('parentDocument', args.parentDocument)
       )
       .filter((q) => q.eq(q.field('isArchived'), false))
       .order('desc')
@@ -136,7 +134,7 @@ export const getTrash = query({
     const identity = await ctx.auth.getUserIdentity();
 
     if (!identity) {
-      throw new Error('Not authenticated');
+      throw new Error('Not authenticated!');
     }
 
     const userId = identity.subject;
@@ -144,7 +142,9 @@ export const getTrash = query({
     const documents = await ctx.db
       .query('documents')
       .withIndex('by_user', (q) => q.eq('userId', userId))
-      .filter((q) => q.eq(q.field('isArchived'), true))
+      .filter((q) => 
+        q.eq(q.field('isArchived'), true)
+      )
       .order('desc')
       .collect();
 
@@ -267,7 +267,9 @@ export const getById = query({
 
     const document = await ctx.db.get(args.documentId);
 
+    console.log('Error: ' + args.documentId);
     if (!document) {
+      console.log('Error: ' + args.documentId);
       throw new Error('Not found!');
     }
 
@@ -307,6 +309,7 @@ export const update = mutation({
 
     const userId = identity.subject;
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, ...rest } = args;
 
     const existingDocument = await ctx.db.get(args.id);

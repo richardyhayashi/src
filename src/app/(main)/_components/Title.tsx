@@ -33,7 +33,9 @@ const Title = ({ initialData }: TitleProps) => {
     setIsEditing(false);
   };
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+    ) => {
     setTitle(event.target.value);
     update({
       id: initialData._id,
@@ -41,7 +43,9 @@ const Title = ({ initialData }: TitleProps) => {
     });
   };
 
-  const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const onKeyDown = (
+      event: React.KeyboardEvent<HTMLInputElement>
+    ) => {
     if (event.key === 'Enter') {
       disableInput();
     }
