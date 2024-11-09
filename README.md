@@ -21,7 +21,7 @@ Source:
 14. Settings
 15. Navbar
 16. Banner component
-17.
+17. Toolbar component (Icon, Title)
 18.
 19.
 20.
