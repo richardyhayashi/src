@@ -22,7 +22,7 @@ Source:
 15. Navbar
 16. Banner component
 17. Toolbar component (Icon, Title)
-18.
+18. Cover image (File upload)
 19.
 20.
 21.
