@@ -23,7 +23,7 @@ Source:
 16. Banner component
 17. Toolbar component (Icon, Title)
 18. Cover image (File upload)
-19.
+19. Advanced file upload (delete, replace)
 20.
 21.
 22.
