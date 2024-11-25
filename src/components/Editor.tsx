@@ -4,10 +4,10 @@ import React from 'react';
 import { useTheme } from 'next-themes';
 
 import '@blocknote/core/fonts/inter.css';
-import { BlockNoteView } from '@blocknote/mantine';
-import '@blocknote/mantine/style.css';
-import { useCreateBlockNote } from '@blocknote/react';
 import { BlockNoteEditor, PartialBlock } from '@blocknote/core';
+import { BlockNoteView } from '@blocknote/mantine';
+import { useCreateBlockNote } from '@blocknote/react';
+import '@blocknote/mantine/style.css';
 
 import { useEdgeStore } from '@/lib/edgestore';
 
@@ -45,7 +45,7 @@ const Editor = ({ onChange, initialContent, editable }: EditorProps) => {
       <BlockNoteView
         editor={editor}
         editable={editable}
-        theme={resolvedTheme == 'dark' ? 'dark' : 'light'}
+        theme={resolvedTheme === 'dark' ? 'dark' : 'light'}
         onChange={onChange}
       />
     </div>
